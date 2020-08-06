@@ -68,6 +68,13 @@
         <div class="hero-button">
           <button class="button">Заказать услугу</button>
         </div>
+
+        <div class="backdrop">
+          <div class="modal">
+
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -449,13 +456,21 @@
         </div>
 
         <div class="footer-subscribe">
-          <b class="subscribe">Подпишитесь на рассылку</b>
-          <button class="subscribe-button">
-            Подписаться
-            <svg class="subscribe-button-icon" width="24" height="24">
-              <use href="./images/icons/symbol-defs.svg#send"></use>
-            </svg>
-          </button>
+          <form action="#" method="GET" class="subscribe-form">
+            <b class="subscribe">Подпишитесь на рассылку</b>
+
+            <div class="subscribe-block">
+              <input type="email" name="user email" class="subscribe-input">
+
+              <button type="submit" class="subscribe-button">
+                Подписаться
+                <svg class="subscribe-button-icon" width="24" height="24">
+                  <use href="./images/icons/symbol-defs.svg#send"></use>
+                </svg>
+              </button>
+            </div>
+
+          </form>
         </div>
       </div>
     </section>
