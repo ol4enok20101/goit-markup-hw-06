@@ -37,7 +37,7 @@
             <li class="mail-link-block">
               <a class="company-address-header link" href="mailto:info@devstudio.com">
                 <svg class="company-address-svg" width="16" height="11">
-                  <use class="envelope" href="./images/icons/symbol-defs.svg#envelope"></use>
+                  <use href="./images/icons/symbol-defs.svg#envelope"></use>
                 </svg>
                 info@devstudio.com
               </a>
@@ -46,7 +46,7 @@
             <li class="phone-link-block">
               <a class="company-address-header link" href="tel:+380961111111">
                 <svg class="company-address-svg" width="10" height="15">
-                  <use class="smartphone" href="./images/icons/symbol-defs.svg#smartphone"></use>
+                  <use href="./images/icons/symbol-defs.svg#smartphone"></use>
                 </svg>
                 +38 096 111 11 11
               </a>
@@ -71,9 +71,80 @@
 
         <div class="backdrop is-hidden">
           <div class="modal">
+            <form action="" class="contact-form">
+
+              <button class="close-button">
+                <svg class="close-button-icon">
+                  <use href="./images/icons/symbol-defs.svg#close"></use>
+                </svg>
+              </button>
+
+              <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+
+              <div class="input-div">
+                <svg class="input-icon">
+                  <use href="./images/icons/symbol-defs.svg#person-black"></use>
+                </svg>
+                <label for="user-name" class="contact-form-label">Имя</label>
+                <input type="text" name="user-name" class="contact-form-input" placeholder="Имя">
+              </div>
+
+              <div class="input-div">
+                <svg class="input-icon">
+                  <use href="./images/icons/symbol-defs.svg#phone-black"></use>
+                </svg>
+                <label for="user-name" class="contact-form-label">Телефон</label>
+                <input type="phone" name="user-phone" class="contact-form-input" placeholder="Телефон">
+              </div>
+
+              <div class="input-div">
+                <svg class="input-icon">
+                  <use href="./images/icons/symbol-defs.svg#email-black"></use>
+                </svg>
+                <label for="user-name" class="contact-form-label">Почта</label>
+                <input type="email" name="user-email" class="contact-form-input" placeholder="Почта">
+              </div>
+
+              <textarea class="input-comment" name="user-message" id=""></textarea>
+
+              <div class="input-checkbox">
+                <label>
+                  <input type="checkbox">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+                </label>
+              </div>
+
+
+
+
+
+              <button class="submit-button" type="submit">Отправить</button>
+            </form>
+
+
 
           </div>
         </div>
+
+        <!-- <script>
+                  const refs = {
+                    openModalBtn: document.querySelector("[data-open-modal]"),
+                    closeModalBtn: document.querySelector("[data-close-modal]"),
+                    backdrop: document.querySelector("[data-backdrop]"),
+                  };
+        
+                  refs.openModalBtn.addEventListener("click", toggleModal);
+                  refs.closeModalBtn.addEventListener("click", toggleModal);
+        
+                  refs.backdrop.addEventListener("click", logBackdropClick);
+        
+                  function toggleModal() {
+                    refs.backdrop.classList.toggle("is-hidden");
+                  }
+        
+                  function logBackdropClick() {
+                    console.log("Это клик в бекдроп");
+                  }
+                </script> -->
 
       </div>
     </section>

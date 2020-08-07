@@ -229,8 +229,8 @@ img {
   background: rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  /* opacity: 0;
+  pointer-events: none; */
 }
 .modal {
   position: absolute;
@@ -248,6 +248,127 @@ img {
   rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.contact-form {
+  position: relative;
+
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+
+  background-color: #FFFFFF;
+}
+.close-button {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+
+  border-radius: 50%;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.close-button-icon {
+  width: 11px;
+  height: 11px;
+}
+.input-div {
+  position: relative;
+}
+.input-div [placehoder] {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+
+/* margin-left: 42px; */
+}
+.modal-title {
+  font-style: 400;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+
+  color: #212121;
+}
+.input-icon {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+  margin-left: 16px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  margin-right: 8px;
+}
+.contact-form-label {
+  position: absolute;
+
+  margin-left: 42px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.contact-form-input {
+  display: block;
+
+  width: 448px;
+  height: 40px;
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.contact-form-input:not(:placeholder-shown) .contact-form-label {
+  color: #2196F3;
+}
+.input-div {
+  display: flex;
+}
+.input-comment {
+  width: 448px;
+  height: 120px;
+  resize: none;
+
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.input-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+.submit-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--accent-color);
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border: unset;
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 /*Преимущества*/
@@ -276,7 +397,7 @@ img {
   width: 70px;
   height: 70px;
 }
-  .advantages-icon-div {
+.advantages-icon-div {
   width: 270px;
   height: 120px;
   background: #F5F4FA;
