@@ -254,7 +254,6 @@ img {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
 
   background-color: #FFFFFF;
 }
@@ -304,7 +303,6 @@ img {
 .input-icon {
   position: absolute;
 
-
   width: 18px;
   height: 18px;
   margin-left: 16px;
@@ -319,8 +317,13 @@ img {
   margin-top: 12px;
   margin-bottom: 12px;
 }
+.contact-form-input:focus + .contact-form-label{
+  color: #2196F3;
+
+}
+
 .contact-form-input {
-  display: block;
+  /* position: absolute; */
 
   width: 448px;
   height: 40px;
@@ -331,13 +334,12 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.contact-form-input:not(:placeholder-shown) .contact-form-label {
-  color: #2196F3;
-}
 .input-div {
+  position: relative;
+
   display: flex;
 }
-.input-comment {
+.input-comment[placeholder] {
   width: 448px;
   height: 120px;
   resize: none;
@@ -350,7 +352,6 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  
 }
 .input-checkbox {
   display: flex;
