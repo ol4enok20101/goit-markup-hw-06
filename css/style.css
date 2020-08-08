@@ -219,6 +219,9 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+
+
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -229,8 +232,8 @@ img {
   background: rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  /* opacity: 0;
+  pointer-events: none; */
 }
 .modal {
   position: absolute;
@@ -264,7 +267,6 @@ img {
   right: 1%;
 
   border-radius: 50%;
-  padding: 0;
   width: 30px;
   height: 30px;
 
@@ -278,31 +280,34 @@ img {
 .input-div {
   position: relative;
 }
-.contact-form-input[placehoder] {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-
-  color: #757575;
-
-  margin-left: 42px;
-}
 .modal-title {
   font-style: 400;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
 
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 }
+.contact-form-label[placehoder], /*серый шрифт*/
+.checkbox-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: var(--description-text-color);
+}
+.contact-form-input[placehoder],
+.checkbox-input[placehoder] {
+  margin-left: 42px;
+}
 .input-icon {
   position: absolute;
+  top: 0;
+  left: 0;
 
   width: 18px;
   height: 18px;
@@ -310,16 +315,45 @@ img {
   margin-top: 11px;
   margin-bottom: 11px;
   margin-right: 8px;
+
+  fill: var(--title-text-color);
 }
 .contact-form-label {
   position: absolute;
+  top: 0;
+  left: 0;
 
   margin-left: 42px;
   margin-top: 12px;
   margin-bottom: 12px;
+
+  opacity: 0;
+  transition: 250ms;
 }
-.contact-form-input:hover + .contact-form-label{
-  color: #2196F3;
+.contact-form-input:focus,
+.contact-form-input:hover,
+.user-comment:hover,
+.user-comment:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.contact-form-input:focus ~ .contact-form-label,
+.contact-form-input:hover ~ .contact-form-label,
+.contact-form-input:not(:placeholder-shown) ~ .contact-form-label {
+  opacity: 1;
+  color: var(--accent-color);
+  transform: translate(-100%, -200%);
+}
+.contact-form-input:focus ~ .input-icon,
+.contact-form-input:not(:placeholder-shown) ~ .input-icon {
+  fill: var(--accent-color);
+}
+.user-comment:hover ~ .contact-form-label,
+.user-comment:focus ~ .contact-form-label,
+.user-comment:not(:placeholder-shown) ~ .contact-form-label{
+  opacity: 1;
+  color: var(--accent-color);
+  transform: translate(-45%, -200%);
 }
 .contact-form-input {
   width: 448px;
@@ -332,18 +366,14 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.input-div {
-  display: flex;
+.comment-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: var(--description-text-color);
 }
-.label-div {
-  position: relative;
-}
-.contact-form-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.input-comment {
+.user-comment {
   width: 448px;
   height: 120px;
   resize: none;
@@ -358,12 +388,17 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.input-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.checkbox-input-div {
 
   margin-bottom: 30px;
+
+
+}
+.checkbox-input {
+
+}
+.checkbox-label {
+
 }
 .submit-button {
   font-weight: 700;
