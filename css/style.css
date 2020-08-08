@@ -254,6 +254,7 @@ img {
   padding: 40px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
   background-color: #FFFFFF;
 }
@@ -317,32 +318,39 @@ img {
   margin-top: 12px;
   margin-bottom: 12px;
 }
-.contact-form-input:focus + .contact-form-label{
+/* .contact-form-input[placeholder] {
+  display: none;
+} */
+.contact-form-input:hover + .contact-form-label{
   color: #2196F3;
-
 }
-
 .contact-form-input {
-  /* position: absolute; */
-
   width: 448px;
   height: 40px;
   margin-bottom: 28px;
   padding-left: 42px;
   padding-right: 16px;
+  box-sizing: border-box;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 .input-div {
-  position: relative;
-
   display: flex;
 }
-.input-comment[placeholder] {
+.label-div {
+  position: relative;
+}
+.contact-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.input-comment {
   width: 448px;
   height: 120px;
   resize: none;
+  box-sizing: border-box;
 
   margin-bottom: 20px;
   padding-left: 16px;
