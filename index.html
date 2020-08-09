@@ -71,7 +71,7 @@
 
         <div class="backdrop is-hidden" data-backdrop>
           <div class="modal">
-            <form action="" class="contact-form" autocomplete="off">
+            <form action="get" class="contact-form" autocomplete="off">
 
               <button class="close-button" data-close-modal>
                 <svg class="close-button-icon">
@@ -90,7 +90,7 @@
               </div>
 
               <div class="input-div">
-                <input class="contact-form-input" type="phone" name="user-phone" placeholder=" " id="user-phone">
+                <input class="contact-form-input" type="tel" name="user-phone" placeholder=" " id="user-phone">
                 <svg class="input-icon">
                   <use href="./images/icons/symbol-defs.svg#phone-black"></use>
                 </svg>
@@ -111,12 +111,12 @@
               </div>
 
               <div class="checkbox-div">
-                <svg class="checkbox-icon">
-                  <use href="./images/icons/symbol-defs.svg#icon-check"></use>
-                </svg>
                 <label class="checkbox-label">
-                  <input class="checkbox-input" type="checkbox" name="">
-                  Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+                  <input class="checkbox-input" type="checkbox" name="checkbox-name"><span>Соглашаюсь с рассылкой и
+                    принимаю <a href="#">Условия договора</a></span>
+                  <svg class="checkbox-icon">
+                    <use href="./images/icons/symbol-defs.svg#icon-check"></use>
+                  </svg>
                 </label>
               </div>
 
