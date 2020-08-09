@@ -240,7 +240,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;  /*не работает*/
+  /* z-index: 999; */
   
   width: 528px;
   height: 581px;
@@ -275,6 +275,8 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .close-button-icon {
+  margin-top: 3px;
+
   width: 11px;
   height: 11px;
 }
@@ -379,8 +381,8 @@ display: hidden;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.01em;
-
   color: var(--description-text-color);
+
   transition: 250ms;
   padding-left: 16px;
   padding-top: 12px;
@@ -400,7 +402,10 @@ display: hidden;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.checkbox-input-div {
+
+.checkbox-div {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -413,21 +418,28 @@ display: hidden;
   appearance: none;
   position: absolute;
 }
-.checkbox-input:checked + .checkbox-icon {
-  border: none;
-  background-color: #2196f3;
-}
 .checkbox-label {
-
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: var(--description-text-color);
 }
 .checkbox-icon {
   width: 16px;
   height: 15px;
-  fill: white;
-  border: 1px solid #212121;
+  fill: #fff;
+  background-color: #fff;
+  border: 2px solid #212121;
+  border-radius: 1px;
 
-  margin-right: 7px;
+  margin-right: 9px;
 }
+.checkbox-input:checked ~ .checkbox-icon {
+  background-color: var(--accent-color);
+}
+
+
 .submit-button {
   font-weight: 700;
   font-size: 16px;
