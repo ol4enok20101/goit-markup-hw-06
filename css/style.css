@@ -402,7 +402,6 @@ display: hidden;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-
 .checkbox-div {
   position: relative;
 
@@ -442,9 +441,6 @@ display: hidden;
 
   margin-right: 9px;
 }
-
-
-
 .submit-button {
   font-weight: 700;
   font-size: 16px;
